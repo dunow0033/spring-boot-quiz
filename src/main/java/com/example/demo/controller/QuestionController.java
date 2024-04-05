@@ -37,8 +37,8 @@ public class QuestionController {
 		return questionService.addQuestion(question);
 	}
 	
-//	@DeleteMapping("/delete")
-//	public ResponseEntity<String> deleteQuestion(@PathVariable("id") Integer id) {
-//		return questionService.deleteQuestion(id);
-//	}
+	@DeleteMapping("/delete")
+	public ResponseEntity<String> deleteQuestion(@PathVariable("id") Integer id) {
+		return questionService.deleteQuestion(id);
+	}
 }

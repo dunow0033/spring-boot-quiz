@@ -41,7 +41,7 @@ public class QuestionService {
 	public ResponseEntity<String> addQuestion(Question question) {
 		try {
 			questionRepo.save(question);
-			return new ResponseEntity<>("Success" HttpStatus.CREATED);
+			return new ResponseEntity<>("Success", HttpStatus.CREATED);
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -55,6 +55,6 @@ public class QuestionService {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-		return new ResponseEntity
+		return new ResponseEntity<>("Failed to delete", HttpStatus.NOT_FOUND);
 	}
 }
